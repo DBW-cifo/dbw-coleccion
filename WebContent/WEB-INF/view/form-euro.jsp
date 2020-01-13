@@ -45,7 +45,9 @@ color: red; </style>
 				<form:input path="pais"/>			
 				<br />  
 				Año:
-				<form:input path="año"/>
+				<form:select path="pais">
+				<form:options items="${Coleccion.listaPais}"/>
+				</form:select>			
 				<br />  	
 				Ceca:
 				<form:input path="ceca" type="text" id="ceca" onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()"/>
