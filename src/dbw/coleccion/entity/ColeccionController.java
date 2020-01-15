@@ -21,15 +21,15 @@ public class ColeccionController {
 private IColeccionService ColeccionService; 
 
 	@RequestMapping("/lista")
-		public String lista(Model modelo) {
-		List<Coleccion> euro=ColeccionService.getColeccion();
-		modelo.addAttribute("euros", euro); 
-		return "lista-euros";
+	public String lista(Model modelo) {
+	List<Coleccion> euro=ColeccionService.getColeccion();
+	modelo.addAttribute("euros", euro); 
+	return "lista-euros";
     }
 	
 	@GetMapping("/addeuro")
 	public String addColeccion(Model modelo) {
-	Coleccion euro = new Coleccion(); 
+	Coleccion euro = new Coleccion();	
 	modelo.addAttribute("euro", euro); 
 	return "form-euro";
 	}
@@ -46,6 +46,7 @@ private IColeccionService ColeccionService;
 	@PostMapping("/saveeuro")
 	public String saveColeccion
 	(@ModelAttribute("euro") Coleccion euro) {
+	System.out.println("Todo bien. ");
 	ColeccionService.save(euro); 
 	return "redirect:/euro/lista";
 	}

@@ -42,8 +42,8 @@ private String tengo;
 private float valor_mercado;
 
 public Coleccion() {	
-
-	super();
+}
+/*	super();
 	listaPais=new LinkedHashMap<String,String>();
 	listaPais.put("AND","AND");       	                           
 	listaPais.put("ALE","ALE");
@@ -130,11 +130,11 @@ public String getPais() {
 public void setPais(String pais) {
 	this.pais = pais;
 }
-@ElementCollection
+/*@ElementCollection
 private Map<String,String> listaPais;
 public Map<String, String> getListaPais() {
     return listaPais;
-}
+}*/
 public String getAño() {
 	return año;
 }
