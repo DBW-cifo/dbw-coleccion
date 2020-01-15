@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Lista de Monedas de Euro</title>
+<title>Lista de Filatelias</title>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous">
@@ -27,41 +27,31 @@
 <div class="container">
 		<div class="jumbotron">
 			<img src="${pageContext.request.contextPath}/resources/img/task.png"
-				alt="EUROS" class="float-right" height="150" />
-			<h1>Lista de Monedas de Euro</h1>
-			<p>Mantenimiento: lista de monedas euro.</p>
+				alt="FILATELIAS" class="float-right" height="150" />
+			<h1>Lista de filatelias</h1>
+			<p>Mantenimiento lista de Filatelias.</p>
 		</div>
-	<a href="addeuro" class="btn btn-primary mb-1">
-		=>AÑADIR moneda euro?</a>            			
+	<a href="addfilatelia" class="btn btn-primary mb-1">
+		=>AÑADIR filatelia?</a>            			
     <p>______________________________________________________________________________</p>
    <table class="table table-striped"> 
    <tr>
-       <td>Id. Moneda</td>
-       <td>Valor Nominal</td>
-       <td>País</td>
-       <td>Año</td>
-       <td>Ceca</td>
-       <td>Existe?</td>
-       <td>Tengo?</td>
-       <td>Valor Mercado</td>
+       <td>Id.Filatelia</td>
+       <td>Nombre</td>
+       <td>Dirección</td>
 	</tr>
 	
-	<c:forEach var="euro" items="${euros}">
-	   <c:url var="linkEditar" value="/euro/updateeuro">
-	   <c:param name="idmoneda" value="${euro.idmoneda }" />
+	<c:forEach var="filatelia" items="${filatelias}">
+	   <c:url var="linkEditar" value="/filatelia/updatefilatelia">
+	   <c:param name="idfilatelia" value="${filatelia.idfilatelia}" />
 	   </c:url>
-	   <c:url var="linkBorrar" value="/euro/deleteeuro">
-	   <c:param name="idmoneda" value="${euro.idmoneda }" />
+	   <c:url var="linkBorrar" value="/filatelia/deletefilatelia">
+	   <c:param name="idfilatelia" value="${filatelia.idfilatelia}" />
 	   </c:url>
 	   <tr>
-		<td><font color="orange">${euro.idmoneda}</font></td>
-		<td><font color="green">${euro.valor_nominal}</font></td>
-		<td><font color="green">${euro.pais}</font></td> 
-		<td><font color="green">${euro.año}</font></td>
-		<td><font color="green">${euro.ceca}</font></td>
-		<td><font color="green">${euro.existe}</font></td>
-		<td><font color="green">${euro.tengo}</font></td>
-		<td><font color="green">${euro.valor_mercado}</font></td>
+		<td><font color="orange">${filatelia.idfilatelia}</font></td>
+		<td><font color="green">${filatelia.nombre}</font></td>
+		<td><font color="green">${filatelia.direccion}</font></td> 
 		<td>
 			<a href="${linkEditar }"
 			   class="btn btn-outline-success btn-sm">=>MODIFICAR?</a>
