@@ -13,5 +13,10 @@
 <br />
 <a href="${pageContext.request.contextPath}/filatelia/lista">Lista de Filatelias</a>
 <br />
+<br />
+<a href="${pageContext.request.contextPath}/precios/lista">Lista de Precios (en desarrollo)</a>
+<br />
+<br />
+<a href="${pageContext.request.contextPath}/consula/lista">Consulta precio moneda (en desarrollo)</a>
 </body>
 </html>
