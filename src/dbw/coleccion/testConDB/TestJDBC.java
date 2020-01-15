@@ -11,12 +11,14 @@ public static void main(String[] args) {
 	String bd="coleccion";
 	
 	String jdbcUrl = "jdbc:mysql://localhost:3306/"+bd+"?useSSL=false&serverTimezone=UTC";
-	System.out.println("Todo bien. Circulen euros.");  	
+	System.out.println("Todo bien. Circulen filatelias."); 
+  /*System.out.println("Todo bien. Circulen euros.");*/
 try {		
 	System.out.println("Conectando: " + jdbcUrl);
 	Class.forName("com.mysql.jdbc.Driver").getDeclaredConstructor().newInstance();
 	Connection con = DriverManager.getConnection(jdbcUrl, user, pass);
-	System.out.println("Todo bien. Circulen euros."+con); 
+	System.out.println("Todo bien. Circulen filatelias."+con); 
+  /*System.out.println("Todo bien. Circulen euros."+con);*/
     }
 catch (Exception exc) {
 exc.printStackTrace();
